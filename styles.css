@@ -10,6 +10,35 @@ body {
   font-size: 0.938rem;
 }
 
+@media (max-width: 600px) {
+  .filters,
+  .box {
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .box img {
+    max-width: 100%;
+  }
+
+  .title,
+  .jobtitle {
+    font-size: 1.2rem;
+  }
+
+  .new,
+  .featured,
+  .filterscontent,
+  .remove,
+  #clear {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .skills p {
+    padding: 0.3rem;
+  }
+}
 .filters {
   background-color: white;
   margin: -2.1875rem 4.3753rem 2.5rem 4.375rem;
