@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>| Job Listings</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <img src="assets/headerimage.jpg" id="headerimg" />
+    <div class="filters">
+      <div id="filterslist"></div>
+      <div id="clear" onclick="clearFilters()">Clear</div>
+    </div>
+    <div class="box featuredbox Frontend Senior HTML CSS JavaScript show">
+      <img src="assets/photosnap.jpg" />
+      <div class="content">
+        <div>
+          <span class="title">Photosnap</span> <span class="new">NEW!</span>
+          <span class="featured">FEATURED</span>
+        </div>
+        <div class="secondline">
+          <div class="jobtitle">Senior Frontend Developer</div>
+          <div class="skills">
+            <p onclick="toggleFilter('Frontend')">Frontend</p>
+            <p onclick="toggleFilter('Senior')">Senior</p>
+            <p onclick="toggleFilter('HTML')">HTML</p>
+            <p onclick="toggleFilter('CSS')">CSS</p>
+            <p onclick="toggleFilter('Javascript')">JavaScript</p>
+          </div>
+        </div>
+        <span class="thirdline">1d ago Full Time USA only</span>
+      </div>
+    </div>
+
+    <div class="box featuredbox Fullstack Midweight Python React show">
+      <img src="assets/manage.jpg" />
+      <div class="content">
+        <div>
+          <span class="title">Manage</span> <span class="new">NEW!</span>
+          <span class="featured">FEATURED</span>
+        </div>
+        <div class="secondline">
+          <div class="jobtitle">Fullstack Developer</div>
+          <div class="skills">
+            <p onclick="toggleFilter('Fullstack')">Fullstack</p>
+            <p onclick="toggleFilter('Midweight')">Midweight</p>
+            <p onclick="toggleFilter('Python')">Python</p>
+            <p onclick="toggleFilter('React')">React</p>
+          </div>
+        </div>
+        <span class="thirdline">1d ago Part Time Remote</span>
+      </div>
+    </div>
+    <div class="box Frontend Junior JavaScript React Sass show">
+      <img src="assets/account.jpg" />
+      <div class="content">
+        <div>
+          <span class="title">Account</span> <span class="new">NEW!</span>
+        </div>
+        <div class="secondline">
+          <div class="jobtitle">Junior Frontend Developer</div>
+          <div class="skills">
+            <p onclick="toggleFilter('Frontend')">Frontend</p>
+            <p onclick="toggleFilter('Junior')">Junior</p>
+            <p onclick="toggleFilter('Javascript')">Javascript</p>
+            <p onclick="toggleFilter('React')">React</p>
+            <p onclick="toggleFilter('Sass')">Sass</p>
+          </div>
+        </div>
+        <span class="thirdline">2d ago Part Time USA only</span>
+      </div>
+    </div>
+    <div class="box Frontend Senior CSS JavaScript show">
+      <img src="assets/myhome.jpg" />
+      <div class="content">
+        <div>
+          <span class="title">MyHome</span>
+        </div>
+        <div class="secondline">
+          <div class="jobtitle">Junior Frontend Developer</div>
+          <div class="skills">
+            <p onclick="toggleFilter('Frontend')">Frontend</p>
+            <p onclick="toggleFilter('Senior')">Senior</p>
+            <p onclick="toggleFilter('CSS')">CSS</p>
+            <p onclick="toggleFilter('Javascript')">JavaScript</p>
+          </div>
+        </div>
+        <span class="thirdline">5d ago Contract USA only</span>
+      </div>
+    </div>
+    <div class="box Fullstack Midweight HTML CSS JavaScript show">
+      <img src="assets/loop.jpg" />
+      <div class="content">
+        <div>
+          <span class="title">Loop Studios</span>
+        </div>
+        <div class="secondline">
+          <div class="jobtitle">Software Engineer</div>
+          <div class="skills">
+            <p onclick="toggleFilter('Fullstack')">Fullstack</p>
+            <p onclick="toggleFilter('Midweight')">Midweight</p>
+            <p onclick="toggleFilter('HTML')">HTML</p>
+            <p onclick="toggleFilter('CSS')">CSS</p>
+            <p onclick="toggleFilter('Javascript')">JavaScript</p>
+          </div>
+        </div>
+        <span class="thirdline">1w ago Full Time Worldwide</span>
+      </div>
+    </div>
+    <div class="box Backend Junior Ruby RoR show">
+      <img src="assets/faceit.jpg" />
+      <div class="content">
+        <div>
+          <span class="title">FaceIt</span>
+        </div>
+        <div class="secondline">
+          <div class="jobtitle">Junior Frontend Developer</div>
+          <div class="skills">
+            <p onclick="toggleFilter('Backend')">Backend</p>
+            <p onclick="toggleFilter('Junior')">Junior</p>
+            <p onclick="toggleFilter('Ruby')">Ruby</p>
+            <p onclick="toggleFilter('RoR')">RoR</p>
+          </div>
+        </div>
+        <span class="thirdline">2w ago Full Time UK only</span>
+      </div>
+    </div>
+    <div class="box Frontend Junior HTML JavaScript Sass show">
+      <img src="assets/shortly.jpg" />
+      <div class="content">
+        <div>
+          <span class="title">Shortly</span>
+        </div>
+        <div class="secondline">
+          <div class="jobtitle">Junior Developer</div>
+          <div class="skills">
+            <p onclick="toggleFilter('Frontend')">Frontend</p>
+            <p onclick="toggleFilter('Junior')">Junior</p>
+            <p onclick="toggleFilter('HTML')">HTML</p>
+            <p onclick="toggleFilter('Javascript')">JavaScript</p>
+            <p onclick="toggleFilter('Sass')">Sass</p>
+          </div>
+        </div>
+        <span class="thirdline">2w ago Full Time Worldwide</span>
+      </div>
+    </div>
+    <div class="box Frontend Junior JavaScript Vue Sass show">
+      <img src="assets/insure.jpg" />
+      <div class="content">
+        <div>
+          <span class="title">Insure</span>
+        </div>
+        <div class="secondline">
+          <div class="jobtitle">Junior Frontend Developer</div>
+          <div class="skills">
+            <p onclick="toggleFilter('Frontend')">Frontend</p>
+            <p onclick="toggleFilter('Junior')">Junior</p>
+            <p onclick="toggleFilter('Javascript')">Javascript</p>
+            <p onclick="toggleFilter('Vue')">Vue</p>
+            <p onclick="toggleFilter('Sass')">Sass</p>
+          </div>
+        </div>
+        <span class="thirdline">2w ago Full Time USA only</span>
+      </div>
+    </div>
+    <div class="box Fullstack Midweight JavaScript Python Django show">
+      <img src="assets/eyecam.jpg" />
+      <div class="content">
+        <div>
+          <span class="title">Eyecam Co.</span>
+        </div>
+        <div class="secondline">
+          <div class="jobtitle">Full Stack Engineer</div>
+          <div class="skills">
+            <p onclick="toggleFilter('Fullstack')">Fullstack</p>
+            <p onclick="toggleFilter('Midweight')">Midweight</p>
+            <p onclick="toggleFilter('Javascript')">Javascript</p>
+            <p onclick="toggleFilter('Python')">Python</p>
+            <p onclick="toggleFilter('Django')">Django</p>
+          </div>
+        </div>
+        <span class="thirdline">3w ago Full Time Worldwide</span>
+      </div>
+    </div>
+    <div class="box Frontend Junior JavaScript React Sass JavaScript show">
+      <img src="assets/airfilter.jpg" />
+      <div class="content">
+        <div>
+          <span class="title">The Air Filter Company</span>
+        </div>
+        <div class="secondline">
+          <div class="jobtitle">Front-end Dev</div>
+          <div class="skills">
+            <p onclick="toggleFilter('Frontend')">Frontend</p>
+            <p onclick="toggleFilter('Junior')">Junior</p>
+            <p onclick="toggleFilter('Javascript')">JavaScript</p>
+            <p onclick="toggleFilter('React')">React</p>
+            <p onclick="toggleFilter('Sass')">Sass</p>
+          </div>
+        </div>
+        <span class="thirdline">1mo ago Part Time Worldwide</span>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by ISTE. Coded by <a href="#">Kshitij</a>.
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
